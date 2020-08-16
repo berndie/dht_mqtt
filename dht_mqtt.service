@@ -1,0 +1,9 @@
+[Unit]
+Description=DHT MQTT daemon
+
+[Service]
+Type=simple
+ExecStart=%{python} %{filepath}
+
+[Install]
+WantedBy=multi-user.target

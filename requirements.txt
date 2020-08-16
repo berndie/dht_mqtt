@@ -1,0 +1,5 @@
+board==1.0
+flake8==3.7.9
+flake8-docstrings==1.5.0
+paho-mqtt==1.5.0
+adafruit-circuitpython-dht==3.4.2

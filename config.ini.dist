@@ -1,0 +1,61 @@
+[DHT]
+# Sensor type
+sensor_type = DHT11
+
+# GPIO pin on your Raspberry Pi/Beaglebone device
+# pin =
+
+# Temperature unit
+temperature_unit = C
+
+# Time between the measurements (in seconds)
+time_between_measurements = 10
+
+
+
+[MQTT]
+# The MQTT broker hostname/address
+# host =
+
+# The MQTT broker port
+port = 1883
+
+# The MQTT username and password
+# username =
+# password =
+
+
+# MQTT topics
+temperature_base_topic = homeassistant/sensor/temperature/
+humidity_base_topic = homeassistant/sensor/humidity/
+
+# The MQTT payload options for the temperature and humidity
+[MQTT_temperature]
+device_class = temperature
+name = Temperature
+state_topic = homeassistant/sensor/BedroomSensor/state
+unit_of_measurement = °C
+value_template = {{ value_json.temperature}}
+
+[MQTT_humidity]
+device_class = humidity
+name = Humidity
+state_topic = homeassistant/sensor/BedroomSensor/state
+unit_of_measurement = %
+value_template = {{ value_json.humidity}}
+
+
+# Options for MQTT TLS. These settings will be fed to the tls_set() method
+# of the paho_mqtt client. See the documentation of the paho_mqtt client for
+# more info
+[MQTT_TLS]
+
+# Configure the logging. There is a logging.StreamHandler that is always
+# present, and a FileHandler which will be active if a file is specified.
+# You can adjust the format and level of both handlers
+[Logging]
+level_stream = INFO
+level_file = WARNING
+format_stream = [%(levelname)s] - %(message)s
+format_file  =  %(asctime)-15s [%(levelname)s] - %(message)s
+#file = dht_mqtt.log
