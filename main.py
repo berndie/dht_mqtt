@@ -93,7 +93,7 @@ def callback_wrapper(client, temperature_state_topic, humidity_state_topic):
                 humidity_state_topic,
                 json.dumps({"humidity": humidity})
             )
-        client.loop()
+
 
     return callback
 
@@ -149,6 +149,7 @@ if __name__ == "__main__":
         client.tls_set(**config[MQTT_TLS_KEY])
     client.connect(host, port)
     logger.info("MQTT client connected to broker %s:%s", host, port)
+    client.loop_start()
 
     # Initialize the sensor
     logger.info("Initializing The DHT Sensor...")
