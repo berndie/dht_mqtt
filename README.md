@@ -7,7 +7,7 @@ Installation
 ============
 Clone the repository and install the required dependencies.
 ```
-git clone https://www.github.com/berndie/dht-mqtt
+git clone https://www.github.com/berndie/dht_mqtt
 cd dht_mqtt
 (sudo) pip(3) install -r requirements.txt
 ```
