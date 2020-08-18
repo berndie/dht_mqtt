@@ -94,7 +94,6 @@ def callback_wrapper(client, temperature_state_topic, humidity_state_topic):
                 json.dumps({"humidity": humidity})
             )
 
-
     return callback
 
 
