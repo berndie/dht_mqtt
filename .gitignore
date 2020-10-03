@@ -141,4 +141,4 @@ cython_debug/
 # User specific config file
 config.ini
 
-.idea
+.idea/

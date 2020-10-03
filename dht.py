@@ -40,9 +40,9 @@ class DHTSensor(adafruit_dht.DHTBase):
             raise ValueError("Unsupported temperature unit \"%s\"" % temp_unit)
 
         if sensor_type in ("DHT11", "DHT22"):
-            is_DHT11 = sensor_type == "DHT11"
-            timeout = 18000 if is_DHT11 else 1000
-            super(DHTSensor, self).__init__(is_DHT11, pin, timeout)
+            is_dht11 = sensor_type == "DHT11"
+            timeout = 18000 if is_dht11 else 1000
+            super(DHTSensor, self).__init__(is_dht11, pin, timeout)
         else:
             raise ValueError("The supported sensors are DHT11 and DHT22")
 

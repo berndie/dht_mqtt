@@ -1,7 +1,8 @@
-DHT - MQTT Sensor
-=================
+DHT - MQTT Sensor for Home Assistant
+====================================
 The code in this repository allows you to measure a DHT sensor with your
-Raspberry Pi or BeagleBone device.
+Raspberry Pi or BeagleBone device and publish it to MQTT in a format suitable
+for Home Assistant.
 
 Installation
 ============

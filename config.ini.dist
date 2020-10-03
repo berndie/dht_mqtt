@@ -29,6 +29,10 @@ port = 1883
 temperature_base_topic = homeassistant/sensor/temperature/
 humidity_base_topic = homeassistant/sensor/humidity/
 
+# Repeat the MQTT config message for Home Assistant every x measurements
+repeat_config_every = 15
+
+
 # The MQTT payload options for the temperature and humidity
 [MQTT_temperature]
 device_class = temperature
